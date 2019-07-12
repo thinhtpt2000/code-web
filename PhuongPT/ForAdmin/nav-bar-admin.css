@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+    font-family: 'Segoe UI', HTVietNam , Roboto , Helvetica, sans-serif;
+    font-size: 17px;
+    background: #f8f5f5;
+}
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+}
+.header i {
+    color: #0F71DD;
+    padding: 8px;
+}
+header {
+    overflow: hidden;
+}
+            /* upper setting */
+.upper {
+    padding: 25px;
+    border: 1px solid #e6e6e6;
+}
+.hd-container {
+    max-width: 1200px;
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
+}
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+        /* Logo brand */
+.hd-logo {
+    display: inline-block;
+    float: left;
+}
+.hd-logo img{
+    width: 250px;
+    height: auto;
+}
+        /* Search box */
+.search-container {
+    float: left;
+    padding: 0;
+    margin: 0;
+    border: 1px solid #e6e6e6;
+    position: relative;
+    background: #e6e6e6;
+}
+.search-txt {
+    float: left;
+    border: none;
+    background: none;
+    outline: none;
+    width: 330px;
+    height: 40px;
+    padding: 0;
+    background: #e6e6e6;
+}
+.search-btn {
+    float: right;
+    border: 0;
+    background: #0F71DD;
+    height: 40px;
+    width: 90px;
+    color: #fff;
+}
+        /* Tool box */
+.form-row {
+    margin: 0;
+}
+.list {
+    list-style: none;
+}
+.hd-hotline {
+    margin-right: 30px;
+}
+.icon-1 {
+    margin-right: 15px;
+}
+.hd-icon img {
+    width: 40px;
+    height: 40px;
+}
+.content {
+    position: relative;
+}
+.content span {
+    display: block;
+}
+.content a {
+    display: block;
+    color: #ff0033;
+    font-weight: 500;
+    font-size: 16px;
+    text-decoration: none;
+}
+.sub-title {
+    color: #ff0033;
+    font-size: 24px;
+}
+.hd-message {
+    box-sizing: border-box;
+}
+.mes-qty {
+    position: absolute;
+    transform: translate(0, -100%);
+    background: #ff0033;
+    color: #fff;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    border-radius: 50%;
+}
+.icon-2 {
+    margin-left: 30px;
+}
+.icon-2 i{
+    font-size: 24px;
+}
+.hd-signIn {
+    margin-left: 50px;
+}
+.hd-signIn a {
+    color: #303030;
+}
+.signIn {
+    display: none;
+}
+.name {
+    color: #0F71DD;
+    display: block;
+}
+.account a {
+    float: right;
+    color: #303030;
+    font-size: 15px;
+}
+            /* LOWER */
+
+
+.main-menu ul {
+    margin: 0;
+}
+.main-menu li {
+    float: left;
+    padding: 15px;
+}
+.main-menu li a{
+    padding: 15px;
+    font-size: 20px;
+    color: #303030;
+}
