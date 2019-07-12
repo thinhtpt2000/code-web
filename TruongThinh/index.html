@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Product List</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Exo&display=swap" rel="stylesheet">
+    <link rel='stylesheet' type='text/css' href='vendors/css/bootstrap.min.css'>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src='vendors/js/bootstrap.min.js'></script>
+    <link rel='stylesheet' type='text/css' href='resources/css/style.css'>
+    <link rel='stylesheet' type='text/css' href='resources/css/queries.css'>
+</head>
+<body>
+    <div class="header">HEADER & NAV BAR</div>
+    <br>
+    <div class="container col-lg-10">
+        <div class="row">
+            <div class="left-aside col-md-3">
+                <div class="row">
+                    <ul class="nav">
+                        <li class="nav-header">
+                            <span class="title-header text-uppercase">Caterogies</span>
+                        </li>
+                        <li class="active">
+                            <a class="caterogy-title" href="#">Type 1</a>
+                        </li>
+                        <li>
+                            <a class="caterogy-title" href="#">Type 2</a>
+                        </li>
+                        <li>
+                            <a class="caterogy-title" href="#">Type 3</a>
+                        </li>
+                        <li>
+                            <a class="caterogy-title" href="#">Type 4</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="row">
+                    <ul class="nav ">
+                        <li class="nav-header">
+                            <span class="title-header text-uppercase">Filter</span>
+                        </li>
+                        <li>
+                            <a class="text-uppercase filter-title" data-toggle="collapse" data-target="#filter-brand" aria-expanded="false" aria-controls="collapseExample" onclick="expandFilter(this)">
+                                Brand
+                                <i class="fas fa-plus filter-icon filter-title"></i>
+                            </a>
+                            <div class="collapse" id="filter-brand">
+                                <div class="form-check">
+                                    <a class="filter-link" href="#">
+                                        <input type="checkbox" class="form-check-input" id="brand1">
+                                        <label class="form-check-label" for="brand1">Brand 1</label>
+                                    </a>
+                                    <a class="filter-link" href="#">
+                                        <input type="checkbox" class="form-check-input" id="brand2">
+                                        <label class="form-check-label" for="brand2">Brand 2</label>
+                                    </a>
+                                    <a class="filter-link" href="#">
+                                        <input type="checkbox" class="form-check-input" id="brand3">
+                                        <label class="form-check-label" for="brand3">Brand 3</label>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a class="text-uppercase filter-title" data-toggle="collapse" data-target="#filter-price" aria-expanded="false" aria-controls="collapseExample" onclick="expandFilter(this)">
+                                Price
+                                <i class="fas fa-plus filter-icon filter-title"></i>
+                            </a>
+                            <div class="collapse" id="filter-price">
+                                <div class="form-check">
+                                    <a class="filter-link" href="#">
+                                        <input type="checkbox" class="form-check-input" id="price1">
+                                        <label class="form-check-label" for="price1">Under 100$</label>
+                                    </a>
+                                    <a class="filter-link" href="#">
+                                        <input type="checkbox" class="form-check-input" id="price2">
+                                        <label class="form-check-label" for="price2">100$ - 500$</label>
+                                    </a>
+                                    <a class="filter-link" href="#">
+                                        <input type="checkbox" class="form-check-input" id="price3">
+                                        <label class="form-check-label" for="price3">Above 500$</label>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a class="text-uppercase filter-title" data-toggle="collapse" data-target="#filter-rating" aria-expanded="false" aria-controls="collapseExample" onclick="expandFilter(this)">
+                                Rating
+                                <i class="fas fa-plus filter-icon filter-title"></i>
+                            </a>
+                            <div class="collapse" id="filter-rating">
+                                <div class="form-check">
+                                    <a class="filter-link" href="#">
+                                        <input type="checkbox" class="form-check-input" id="rating-five">
+                                        <label class="form-check-label" for="rating-five">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </label>
+                                    </a>
+                                    <a class="filter-link" href="#">
+                                        <input type="checkbox" class="form-check-input" id="rating-four">
+                                        <label class="form-check-label" for="rating-four">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star fa-star-no-color"></i>
+                                            and up
+                                        </label>
+                                    </a>
+                                    <a class="filter-link" href="#">
+                                        <input type="checkbox" class="form-check-input" id="rating-three">
+                                        <label class="form-check-label" for="rating-three">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star fa-star-no-color"></i>
+                                            <i class="fas fa-star fa-star-no-color"></i>
+                                            and up
+                                        </label>
+                                    </a>
+                                    <a class="filter-link" href="#">
+                                        <input type="checkbox" class="form-check-input" id="rating-two">
+                                        <label class="form-check-label" for="rating-two">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star fa-star-no-color"></i>
+                                                <i class="fas fa-star fa-star-no-color"></i>
+                                                <i class="fas fa-star fa-star-no-color"></i>
+                                                and up
+                                        </label>
+                                    </a>
+                                    <a class="filter-link" href="#">
+                                        <input type="checkbox" class="form-check-input" id="rating-one">
+                                        <label class="form-check-label" for="rating-one">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star fa-star-no-color"></i>
+                                            <i class="fas fa-star fa-star-no-color"></i>
+                                            <i class="fas fa-star fa-star-no-color"></i>
+                                            <i class="fas fa-star fa-star-no-color"></i>
+                                            and up
+                                        </label>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a class="text-uppercase filter-title" data-toggle="collapse" data-target="#filter-sale" aria-expanded="false" aria-controls="collapseExample" onclick="expandFilter(this)">
+                                On sale
+                                <i class="fas fa-plus filter-icon filter-title"></i>
+                            </a>
+                            <div class="collapse" id="filter-sale">
+                                <div class="form-check">
+                                    <a class="filter-link" href="#">
+                                        <input type="checkbox" class="form-check-input" id="sale">
+                                        <label class="form-check-label" for="sale">On sale</label>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a class="text-uppercase filter-title" data-toggle="collapse" data-target="#filter-size" aria-expanded="false" aria-controls="collapseExample" onclick="expandFilter(this)">
+                                Size
+                                <i class="fas fa-plus filter-icon filter-title"></i>
+                            </a>
+                            <div class="collapse" id="filter-size">
+                                <form action="#">
+                                    <div class="form-group">
+                                        <!-- <div class="col-md-6"> -->
+                                            <input type="number" class="form-control"placeholder="Size" value=39>
+                                        <!-- </div> -->
+                                        <!-- <div class="col-md-3"> -->
+                                            <button type="submit" class="btn btn-secondary">Filter</button>
+                                        <!-- </div> -->
+                                    </div>
+                                </form>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="content col-md-9">
+                <div class="row">
+                    <div class="nav-header col-sm-10">
+                        <span class="title-header text-uppercase">Men's product</span>
+                    </div>
+                    <div class="col-sm-2 sort-button">
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle text-uppercase" type="button" data-toggle="dropdown">
+                                Sort by
+                                <i class="fas fa-angle-down"></i>
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-right text-uppercase">
+                                <li><a href="#">Newest</a></li>
+                                <li><a href="#">Most Popular</a></li>
+                                <li><a href="#">Highest price</a></li>
+                                <li><a href="#">Lowest price</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="product-list">
+                        <div class="col-sm-3 product-box">
+                            <div id="product1" class="carousel slide" data-ride="carousel">
+                                <!-- Indicators -->
+                                <ol class="carousel-indicators">
+                                    <li data-target="#product1" data-slide-to="0" class="active"></li>
+                                    <li data-target="#product1" data-slide-to="1"></li>
+                                    <li data-target="#product1" data-slide-to="2"></li>
+                                </ol>
+                            
+                                <!-- Wrapper for slides -->
+                                <div class="carousel-inner">
+                                    <div class="item active">
+                                        <a href="#"><img src="resources/img/200x200.png" alt="product-image" class="product-image__main"></a>
+                                    </div>
+                            
+                                    <div class="item">
+                                        <a href="#"><img src="resources/img/200x200.png" alt="product-image" class="product-image__main"></a>
+                                    </div>
+                                
+                                    <div class="item">
+                                        <a href="#"><img src="resources/img/200x200.png" alt="product-image" class="product-image__main"></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- <a href="#"><img src="resources/img/200x200.png" alt="product-image" class="product-image__main"></a>
+                            <a href="#"><img src="resources/img/200x200.png" alt="product-image" class="product-image__sub"></a>
+                            <a href="#"><img src="resources/img/200x200.png" alt="product-image" class="product-image__sub"></a> -->
+                            <i class="far fa-heart product-love" onclick="addWishList(this)"></i>
+                            <a href="#">
+                                <div class="product-title text-uppercase">Product title</div>
+                                <span class="product-detail product-type">Type</span>
+                                <span class=" product-detail product-color">Color</span>
+                                <span class=" product-detail product-price">Price</span>
+                            </a>
+                        </div>
+                        <div class="col-sm-3 product-box">
+                            <div id="product2" class="carousel slide" data-ride="carousel">
+                                <ol class="carousel-indicators">
+                                    <li data-target="#product2" data-slide-to="0" class="active"></li>
+                                    <li data-target="#product2" data-slide-to="1"></li>
+                                    <li data-target="#product2" data-slide-to="2"></li>
+                                </ol>
+                                <div class="carousel-inner">
+                                    <div class="item active">
+                                        <a href="#"><img src="resources/img/200x200.png" alt="product-image" class="product-image__main"></a>
+                                    </div>
+                            
+                                    <div class="item">
+                                        <a href="#"><img src="resources/img/200x200.png" alt="product-image" class="product-image__main"></a>
+                                    </div>
+                                
+                                    <div class="item">
+                                        <a href="#"><img src="resources/img/200x200.png" alt="product-image" class="product-image__main"></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <i class="far fa-heart product-love" onclick="addWishList(this)"></i>
+                            <a href="#">
+                                <div class="product-title text-uppercase">Product title</div>
+                                <span class="product-detail product-type">Type</span>
+                                <span class=" product-detail product-color">Color</span>
+                                <span class=" product-detail product-price">Price</span>
+                            </a>
+                        </div>
+                        <div class="col-sm-3 product-box">
+                            <div id="product3" class="carousel slide" data-ride="carousel">
+                                <ol class="carousel-indicators">
+                                    <li data-target="#product3" data-slide-to="0" class="active"></li>
+                                    <li data-target="#product3" data-slide-to="1"></li>
+                                    <li data-target="#product3" data-slide-to="2"></li>
+                                </ol>
+                                <div class="carousel-inner">
+                                    <div class="item active">
+                                        <a href="#"><img src="resources/img/200x200.png" alt="product-image" class="product-image__main"></a>
+                                    </div>
+                            
+                                    <div class="item">
+                                        <a href="#"><img src="resources/img/200x200.png" alt="product-image" class="product-image__main"></a>
+                                    </div>
+                                
+                                    <div class="item">
+                                        <a href="#"><img src="resources/img/200x200.png" alt="product-image" class="product-image__main"></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <i class="far fa-heart product-love" onclick="addWishList(this)"></i>
+                            <a href="#">
+                                <div class="product-title text-uppercase">Product title</div>
+                                <span class="product-detail product-type">Type</span>
+                                <span class=" product-detail product-color">Color</span>
+                                <span class=" product-detail product-price">Price</span>
+                            </a>
+                        </div>
+                        <div class="col-sm-3 product-box">
+                            <div id="product4" class="carousel slide" data-ride="carousel">
+                                <ol class="carousel-indicators">
+                                    <li data-target="#product4" data-slide-to="0" class="active"></li>
+                                    <li data-target="#product4" data-slide-to="1"></li>
+                                    <li data-target="#product4" data-slide-to="2"></li>
+                                </ol>
+                                <div class="carousel-inner">
+                                    <div class="item active">
+                                        <a href="#"><img src="resources/img/200x200.png" alt="product-image" class="product-image__main"></a>
+                                    </div>
+                            
+                                    <div class="item">
+                                        <a href="#"><img src="resources/img/200x200.png" alt="product-image" class="product-image__main"></a>
+                                    </div>
+                                
+                                    <div class="item">
+                                        <a href="#"><img src="resources/img/200x200.png" alt="product-image" class="product-image__main"></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <i class="far fa-heart product-love" onclick="addWishList(this)"></i>
+                            <a href="#">
+                                <div class="product-title text-uppercase">Product title</div>
+                                <span class="product-detail product-type">Type</span>
+                                <span class=" product-detail product-color">Color</span>
+                                <span class=" product-detail product-price">Price</span>
+                            </a>
+                        </div>
+                        <div class="col-sm-3 product-box">
+                            <div id="product5" class="carousel slide" data-ride="carousel">
+                                <ol class="carousel-indicators">
+                                    <li data-target="#product5" data-slide-to="0" class="active"></li>
+                                    <li data-target="#product5" data-slide-to="1"></li>
+                                    <li data-target="#product5" data-slide-to="2"></li>
+                                </ol>
+                                <div class="carousel-inner">
+                                    <div class="item active">
+                                        <a href="#"><img src="resources/img/200x200.png" alt="product-image" class="product-image__main"></a>
+                                    </div>
+                            
+                                    <div class="item">
+                                        <a href="#"><img src="resources/img/200x200.png" alt="product-image" class="product-image__main"></a>
+                                    </div>
+                                
+                                    <div class="item">
+                                        <a href="#"><img src="resources/img/200x200.png" alt="product-image" class="product-image__main"></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <i class="far fa-heart product-love" onclick="addWishList(this)"></i>
+                            <a href="#">
+                                <div class="product-title text-uppercase">Product title</div>
+                                <span class="product-detail product-type">Type</span>
+                                <span class=" product-detail product-color">Color</span>
+                                <span class=" product-detail product-price">Price</span>
+                            </a>
+                        </div>
+                        <div class="col-sm-3 product-box">
+                            <div id="product6" class="carousel slide" data-ride="carousel">
+                                <ol class="carousel-indicators">
+                                    <li data-target="#product6" data-slide-to="0" class="active"></li>
+                                    <li data-target="#product6" data-slide-to="1"></li>
+                                    <li data-target="#product6" data-slide-to="2"></li>
+                                </ol>
+                                <div class="carousel-inner">
+                                    <div class="item active">
+                                        <a href="#"><img src="resources/img/200x200.png" alt="product-image" class="product-image__main"></a>
+                                    </div>
+                            
+                                    <div class="item">
+                                        <a href="#"><img src="resources/img/200x200.png" alt="product-image" class="product-image__main"></a>
+                                    </div>
+                                
+                                    <div class="item">
+                                        <a href="#"><img src="resources/img/200x200.png" alt="product-image" class="product-image__main"></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <i class="far fa-heart product-love" onclick="addWishList(this)"></i>
+                            <a href="#">
+                                <div class="product-title text-uppercase">Product title</div>
+                                <span class="product-detail product-type">Type</span>
+                                <span class=" product-detail product-color">Color</span>
+                                <span class=" product-detail product-price">Price</span>
+                            </a>
+                        </div>
+                        <div class="col-sm-3 product-box">
+                            <div id="product7" class="carousel slide" data-ride="carousel">
+                                <ol class="carousel-indicators">
+                                    <li data-target="#product7" data-slide-to="0" class="active"></li>
+                                    <li data-target="#product7" data-slide-to="1"></li>
+                                    <li data-target="#product7" data-slide-to="2"></li>
+                                </ol>
+                                <div class="carousel-inner">
+                                    <div class="item active">
+                                        <a href="#"><img src="resources/img/200x200.png" alt="product-image" class="product-image__main"></a>
+                                    </div>
+                            
+                                    <div class="item">
+                                        <a href="#"><img src="resources/img/200x200.png" alt="product-image" class="product-image__main"></a>
+                                    </div>
+                                
+                                    <div class="item">
+                                        <a href="#"><img src="resources/img/200x200.png" alt="product-image" class="product-image__main"></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <i class="far fa-heart product-love" onclick="addWishList(this)"></i>
+                            <a href="#">
+                                <div class="product-title text-uppercase">Product title</div>
+                                <span class="product-detail product-type">Type</span>
+                                <span class=" product-detail product-color">Color</span>
+                                <span class=" product-detail product-price">Price</span>
+                            </a>
+                        </div>
+                        <div class="col-sm-3 product-box">
+                            <div id="product8" class="carousel slide" data-ride="carousel">
+                                <ol class="carousel-indicators">
+                                    <li data-target="#product8" data-slide-to="0" class="active"></li>
+                                    <li data-target="#product8" data-slide-to="1"></li>
+                                    <li data-target="#product8" data-slide-to="2"></li>
+                                </ol>
+                                <div class="carousel-inner">
+                                    <div class="item active">
+                                        <a href="#"><img src="resources/img/200x200.png" alt="product-image" class="product-image__main"></a>
+                                    </div>
+                            
+                                    <div class="item">
+                                        <a href="#"><img src="resources/img/200x200.png" alt="product-image" class="product-image__main"></a>
+                                    </div>
+                                
+                                    <div class="item">
+                                        <a href="#"><img src="resources/img/200x200.png" alt="product-image" class="product-image__main"></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <i class="far fa-heart product-love" onclick="addWishList(this)"></i>
+                            <a href="#">
+                                <div class="product-title text-uppercase">Product title</div>
+                                <span class="product-detail product-type">Type</span>
+                                <span class=" product-detail product-color">Color</span>
+                                <span class=" product-detail product-price">Price</span>
+                            </a>
+                        </div>
+                        <nav class="pagination-bar">
+                            <ul class="pagination">
+                              <li class="page-item disabled">
+                                <a class="page-link" href="#">Prev</a>
+                              </li>
+                              <li class="page-item active">
+                                <a class="page-link" href="#">
+                                  1
+                                  <span class="sr-only">(current)</span>
+                                </a>
+                              </li>
+                              <li class="page-item"><a class="page-link" href="#">2</a></li>
+                              <li class="page-item"><a class="page-link" href="#">3</a></li>
+                              <li class="page-item">
+                                <a class="page-link" href="#">Next</a>
+                              </li>
+                            </ul>
+                          </nav>
+                    </div>          
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer col-md-12">FOOTER</div>
+</body>
+<script src='vendors/js/jquery.waypoints.min.js'></script>
+<script src='vendors/js/infinite.min.js'></script>
+<script src='resources/js/script.js'></script>
+</html>
