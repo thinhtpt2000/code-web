@@ -9,7 +9,7 @@ function expandFilter(element) {
         tag.classList.add("fa-minus");
         tag.classList.remove("fa-plus");
     }
-    
+
 }
 function addWishList(element) {
     if (element.classList.contains("far")) {
@@ -21,3 +21,17 @@ function addWishList(element) {
         element.classList.add("far");
     }
 }
+$(".filter-link").click(
+    function () {
+        var elements = this.getElementsByClassName("fa-square")[0];
+        if (elements != null) {
+            elements.classList.add("fa-check-square");
+            elements.classList.remove("fa-square");
+        }
+        else {
+            var elements = this.getElementsByClassName("fa-check-square")[0];
+            elements.classList.add("fa-square");
+            elements.classList.remove("fa-check-square");
+        }
+    }
+)
