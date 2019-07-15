@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Product List</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+        integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Exo&display=swap" rel="stylesheet">
+    <link rel='stylesheet' type='text/css' href='vendors/css/bootstrap.min.css'>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src='vendors/js/bootstrap.min.js'></script>
+    <link rel='stylesheet' type='text/css' href='resources/css/product.css'>
+    <link rel='stylesheet' type='text/css' href='resources/css/product-queries.css'>
+</head>
+
+<body>
+    <div class="header">HEADER & NAV BAR</div>
+    <br>
+    <div class="container col-lg-10">
+        <div class="row">
+            <div class="left-aside col-md-3">
+                <div class="row">
+                    <ul class="nav">
+                        <li class="nav-header">
+                            <span class="title-header text-uppercase">Caterogies</span>
+                        </li>
+                        <li class="active">
+                            <a class="caterogy-title" href="?type=lifestyle">Lifestyle</a>
+                        </li>
+                        <li>
+                            <a class="caterogy-title" href="?type=running">Running</a>
+                        </li>
+                        <li>
+                            <a class="caterogy-title" href="?type=training">Traning & Gym</a>
+                        </li>
+                        <li>
+                            <a class="caterogy-title" href="?type=sport">Sport</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="row">
+                    <ul class="nav ">
+                        <li class="nav-header">
+                            <span class="title-header text-uppercase">Filter</span>
+                        </li>
+                        <li>
+                            <a class="filter-title" data-toggle="collapse" data-target="#filter-brand"
+                                aria-expanded="false" aria-controls="collapseExample" onclick="expandFilter(this)">
+                                Brand
+                                <i class="fas fa-plus filter-icon filter-title"></i>
+                            </a>
+                            <div class="collapse" id="filter-brand">
+                                <div class="filter-content">
+                                    <a class="filter-link" href="#">
+                                        <i class="far fa-square"></i>
+                                        Nike
+                                    </a>
+                                    <a class="filter-link" href="#">
+                                        <i class="far fa-square"></i>
+                                        Adidas
+                                    </a>
+                                    <a class="filter-link" href="#">
+                                        <i class="far fa-square"></i>
+                                        Converse
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a class="filter-title" data-toggle="collapse" data-target="#filter-price"
+                                aria-expanded="false" aria-controls="collapseExample" onclick="expandFilter(this)">
+                                Price
+                                <i class="fas fa-plus filter-icon filter-title"></i>
+                            </a>
+                            <div class="collapse" id="filter-price">
+                                <div class="filter-content">
+                                    <a class="filter-link" href="#">
+                                        <i class="far fa-square"></i>
+                                        Under 50$
+                                    </a>
+                                    <a class="filter-link" href="#">
+                                        <i class="far fa-square"></i>
+                                        50$ - 200$
+                                    </a>
+                                    <a class="filter-link" href="#">
+                                        <i class="far fa-square"></i>
+                                        Above 200$
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a class="filter-title" data-toggle="collapse" data-target="#filter-rating"
+                                aria-expanded="false" aria-controls="collapseExample" onclick="expandFilter(this)">
+                                Rating
+                                <i class="fas fa-plus filter-icon filter-title"></i>
+                            </a>
+                            <div class="collapse" id="filter-rating">
+                                <div class="filter-content">
+                                    <a class="filter-link" href="#">
+                                        <i class="far fa-square"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </a>
+                                    <a class="filter-link" href="#">
+                                        <i class="far fa-square"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star fa-star-no-color"></i>
+                                        and up
+                                    </a>
+                                    <a class="filter-link" href="#">
+                                        <i class="far fa-square"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star fa-star-no-color"></i>
+                                        <i class="fas fa-star fa-star-no-color"></i>
+                                        and up
+                                    </a>
+                                    <a class="filter-link" href="#">
+                                        <i class="far fa-square"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star fa-star-no-color"></i>
+                                        <i class="fas fa-star fa-star-no-color"></i>
+                                        <i class="fas fa-star fa-star-no-color"></i>
+                                        and up
+                                    </a>
+                                    <a class="filter-link" href="#">
+                                        <i class="far fa-square"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star fa-star-no-color"></i>
+                                        <i class="fas fa-star fa-star-no-color"></i>
+                                        <i class="fas fa-star fa-star-no-color"></i>
+                                        <i class="fas fa-star fa-star-no-color"></i>
+                                        and up
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a class="filter-title" data-toggle="collapse" data-target="#filter-discount"
+                                aria-expanded="false" aria-controls="collapseExample" onclick="expandFilter(this)">
+                                Discount
+                                <i class="fas fa-plus filter-icon filter-title"></i>
+                            </a>
+                            <div class="collapse" id="filter-discount">
+                                <div class="filter-content">
+                                    <a class="filter-link" href="#">
+                                            <i class="far fa-square"></i>
+                                            Discount
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a class="filter-title" data-toggle="collapse" data-target="#filter-material"
+                                aria-expanded="false" aria-controls="collapseExample" onclick="expandFilter(this)">
+                                Material
+                                <i class="fas fa-plus filter-icon filter-title"></i>
+                            </a>
+                            <div class="collapse" id="filter-material">
+                                <div class="filter-content">
+                                    <a class="filter-link" href="#">
+                                        <i class="far fa-square"></i>
+                                        Leather
+                                    </a>
+                                    <a class="filter-link" href="#">
+                                        <i class="far fa-square"></i>
+                                        Canvas
+                                    </a>
+                                    <a class="filter-link" href="#">
+                                        <i class="far fa-square"></i>
+                                        Textiles
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a class="filter-title" data-toggle="collapse" data-target="#filter-size"
+                                aria-expanded="false" aria-controls="collapseExample" onclick="expandFilter(this)">
+                                Size
+                                <i class="fas fa-plus filter-icon filter-title"></i>
+                            </a>
+                            <div class="collapse" id="filter-size">
+                                <form action="#" class="filter-content">
+                                    <input type="number" class="form-control" placeholder="Size" value=39>
+                                    <button type="submit" class="btn btn-secondary">Filter</button>
+                                </form>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="content col-md-9">
+                <div class="row">
+                    <div class="nav-header col-sm-10">
+                        <span class="title-header text-uppercase">Men's product</span>
+                    </div>
+                    <div class="col-sm-2 sort-button">
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle text-uppercase" type="button"
+                                data-toggle="dropdown">
+                                Sort by
+                                <i class="fas fa-angle-down"></i>
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-right dropdown-sort">
+                                <li class="dropdown-item-sort"><a href="?sort=newest">Newest</a></li>
+                                <li class="dropdown-item-sort"><a href="?sort=popular">Most Popular</a></li>
+                                <li class="dropdown-item-sort"><a href="?sort=higest-price">Highest price</a></li>
+                                <li class="dropdown-item-sort"><a href="?sort=lowest-price">Lowest price</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="product-list">
+                        <div class="col-sm-3 product-box">
+                            <div id="product1" class="carousel slide" data-ride="carousel">
+                                <!-- Indicators -->
+                                <ol class="carousel-indicators">
+                                    <li data-target="#product1" data-slide-to="0" class="active"></li>
+                                    <li data-target="#product1" data-slide-to="1"></li>
+                                </ol>
+
+                                <!-- Wrapper for slides -->
+                                <div class="carousel-inner">
+                                    <div class="item active">
+                                        <a href="#"><img
+                                                src="resources/img/converse-chucky-taylor-all-star-boardies-001.jpg"
+                                                alt="product-image" class="product-image__main"></a>
+                                    </div>
+                                    <div class="item">
+                                        <a href="#"><img
+                                                src="resources/img/converse-chucky-taylor-all-star-boardies-002.jpg"
+                                                alt="product-image" class="product-image__main"></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#"><i class="fas fa-cart-plus product-buynow"></i></a>
+                            <i class="far fa-heart product-love" onclick="addWishList(this)"></i>
+                            <a href="#">
+                                <div class="product-title">Converse Chuck Taylor All Star Boardies</div>
+                                <span class="product-detail product-type">Life style</span>
+                                <span class=" product-detail product-color">2 colors</span>
+                                <span class=" product-detail product-price">65 USD</span>
+                            </a>
+                        </div>
+                        <div class="col-sm-3 product-box">
+                            <div id="product2" class="carousel slide" data-ride="carousel">
+                                <ol class="carousel-indicators">
+                                    <li data-target="#product2" data-slide-to="0" class="active"></li>
+                                    <li data-target="#product2" data-slide-to="1"></li>
+                                </ol>
+                                <div class="carousel-inner">
+                                    <div class="item active">
+                                        <a href="#"><img
+                                                src="resources/img/converse-chuck-taylor-all-star-renew-canvas-001.jpg"
+                                                alt="product-image" class="product-image__main"></a>
+                                    </div>
+                                    <div class="item">
+                                        <a href="#"><img
+                                                src="resources/img/converse-chuck-taylor-all-star-renew-canvas-002.jpg"
+                                                alt="product-image" class="product-image__main"></a>
+                                    </div>
+                                    <div class="item">
+                                        <a href="#"><img
+                                                src="resources/img/converse-chuck-taylor-all-star-renew-canvas-003.jpg"
+                                                alt="product-image" class="product-image__main"></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#"><i class="fas fa-cart-plus product-buynow"></i></a>
+                            <i class="far fa-heart product-love" onclick="addWishList(this)"></i>
+                            <a href="#">
+                                <div class="product-title">Converse Chuck Taylor All Star Renew Canvas</div>
+                                <span class="product-detail product-type">Lifestyle</span>
+                                <span class=" product-detail product-color">3 colors</span>
+                                <span class=" product-detail product-price">72 USD</span>
+                            </a>
+                        </div>
+                        <div class="col-sm-3 product-box">
+                            <div id="product3" class="carousel slide" data-ride="carousel">
+                                <ol class="carousel-indicators">
+                                    <li data-target="#product3" data-slide-to="0" class="active"></li>
+                                    <li data-target="#product3" data-slide-to="1"></li>
+                                    <li data-target="#product3" data-slide-to="2"></li>
+                                </ol>
+                                <div class="carousel-inner">
+                                    <div class="item active">
+                                        <a href="#"><img
+                                                src="resources/img/converse-chuck-70-vintage-canvas-low-001.jpg"
+                                                alt="product-image" class="product-image__main"></a>
+                                    </div>
+
+                                    <div class="item">
+                                        <a href="#"><img
+                                                src="resources/img/converse-chuck-70-vintage-canvas-low-002.jpg"
+                                                alt="product-image" class="product-image__main"></a>
+                                    </div>
+
+                                    <div class="item">
+                                        <a href="#"><img
+                                                src="resources/img/converse-chuck-70-vintage-canvas-low-003.jpg"
+                                                alt="product-image" class="product-image__main"></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#"><i class="fas fa-cart-plus product-buynow"></i></a>
+                            <i class="far fa-heart product-love" onclick="addWishList(this)"></i>
+                            <a href="#">
+                                <div class="product-title">Converse Chuck 70 Vintage Canvas Low</div>
+                                <span class="product-detail product-type">Lifestyle</span>
+                                <span class=" product-detail product-color">3 colors</span>
+                                <span class=" product-detail product-price">78 USD</span>
+                            </a>
+                        </div>
+                        <div class="col-sm-3 product-box">
+                            <div id="product4" class="carousel slide" data-ride="carousel">
+                                <ol class="carousel-indicators">
+                                    <li data-target="#product4" data-slide-to="0" class="active"></li>
+                                    <li data-target="#product4" data-slide-to="1"></li>
+                                </ol>
+                                <div class="carousel-inner">
+                                    <div class="item active">
+                                        <a href="#"><img src="resources/img/adidas-response-plus-001.jpg"
+                                                alt="product-image" class="product-image__main"></a>
+                                    </div>
+                                    <div class="item">
+                                        <a href="#"><img src="resources/img/adidas-response-plus-002.jpg"
+                                                alt="product-image" class="product-image__main"></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#"><i class="fas fa-cart-plus product-buynow"></i></a>
+                            <i class="far fa-heart product-love" onclick="addWishList(this)"></i>
+                            <a href="#">
+                                <div class="product-title">Adidas Response Plus</div>
+                                <span class="product-detail product-type">Running</span>
+                                <span class=" product-detail product-color">2 colors</span>
+                                <span class=" product-detail product-price">69 USD</span>
+                            </a>
+                        </div>
+                        <div class="col-sm-3 product-box">
+                            <div id="product5" class="carousel slide" data-ride="carousel">
+                                <ol class="carousel-indicators">
+                                    <li data-target="#product5" data-slide-to="0" class="active"></li>
+                                    <li data-target="#product5" data-slide-to="1"></li>
+                                    <li data-target="#product5" data-slide-to="2"></li>
+                                    <li data-target="#product5" data-slide-to="4"></li>
+                                </ol>
+                                <div class="carousel-inner">
+                                    <div class="item active">
+                                        <a href="#"><img src="resources/img/nike-air-max-720-001.jpg"
+                                                alt="product-image" class="product-image__main"></a>
+                                    </div>
+                                    <div class="item">
+                                        <a href="#"><img src="resources/img/nike-air-max-720-002.jpg"
+                                                alt="product-image" class="product-image__main"></a>
+                                    </div>
+                                    <div class="item">
+                                        <a href="#"><img src="resources/img/nike-air-max-720-003.jpg"
+                                                alt="product-image" class="product-image__main"></a>
+                                    </div>
+                                    <div class="item">
+                                        <a href="#"><img src="resources/img/nike-air-max-720-004.jpg"
+                                                alt="product-image" class="product-image__main"></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#"><i class="fas fa-cart-plus product-buynow"></i></a>
+                            <i class="far fa-heart product-love" onclick="addWishList(this)"></i>
+                            <a href="#">
+                                <div class="product-title">Nike Air Max 720</div>
+                                <span class="product-detail product-type">Liftestyle</span>
+                                <span class=" product-detail product-color">4 colors</span>
+                                <span class=" product-detail product-price">120 USD</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <nav class="pagination-bar">
+                        <ul class="pagination">
+                            <li class="page-item disabled">
+                                <a class="page-link" href="#"><i class="fas fa-arrow-left"></i></a>
+                            </li>
+                            <li class="page-item active">
+                                <a class="page-link" href="#">
+                                    1
+                                    <span class="sr-only">(current)</span>
+                                </a>
+                            </li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item">
+                                <a class="page-link" href="#"><i class="fas fa-arrow-right"></i></a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer col-md-12">FOOTER</div>
+</body>
+<script src='vendors/js/infinite.min.js'></script>
+<script src='resources/js/product-animation.js'></script>
+
+</html>
